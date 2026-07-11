@@ -1,0 +1,266 @@
+@import 'leaflet/dist/leaflet.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #07070f;
+  --card: #12121f;
+  --border: #24243a;
+  --accent: #22e06b;
+  --accent-2: #35e0d8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: #fff;
+  font-family: var(--font-geist), system-ui, -apple-system, sans-serif;
+}
+
+.font-mono {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+/* ---------- custom scrollbar ---------- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a14;
+}
+::-webkit-scrollbar-thumb {
+  background: #24243a;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #33334f;
+}
+
+::selection {
+  background: rgba(34, 224, 107, 0.35);
+}
+
+/* ---------- ambient animations ---------- */
+@keyframes float {
+  0%, 100% { transform: translateY(0) }
+  50% { transform: translateY(-14px) }
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+.animate-float-slow {
+  animation: float 9s ease-in-out infinite;
+}
+
+@keyframes drift {
+  0%, 100% { transform: translate(0, 0) scale(1) }
+  33% { transform: translate(40px, -30px) scale(1.08) }
+  66% { transform: translate(-30px, 25px) scale(0.95) }
+}
+.animate-drift {
+  animation: drift 18s ease-in-out infinite;
+}
+.animate-drift-delayed {
+  animation: drift 22s ease-in-out infinite reverse;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 24px rgba(34, 224, 107, 0.25) }
+  50% { box-shadow: 0 0 48px rgba(34, 224, 107, 0.5) }
+}
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  from { background-position: 200% center }
+  to { background-position: -200% center }
+}
+.text-shimmer {
+  background: linear-gradient(
+    110deg,
+    #22e06b 20%,
+    #b9ffd6 40%,
+    #35e0d8 60%,
+    #22e06b 80%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 5s linear infinite;
+}
+
+/* subtle grid backdrop for hero */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 40%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 40%, transparent 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-float-slow,
+  .animate-drift,
+  .animate-drift-delayed,
+  .animate-pulse-glow,
+  .text-shimmer {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------- marquee ---------- */
+@keyframes marquee {
+  from { transform: translateX(0) }
+  to { transform: translateX(-50%) }
+}
+.animate-marquee {
+  animation: marquee 32s linear infinite;
+}
+
+/* ---------- aurora backdrop ---------- */
+@keyframes aurora {
+  0%, 100% {
+    transform: translate(-10%, -5%) rotate(0deg) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(8%, 6%) rotate(12deg) scale(1.15);
+    opacity: 0.8;
+  }
+}
+.aurora {
+  position: absolute;
+  inset: -20%;
+  background:
+    radial-gradient(ellipse 40% 30% at 30% 20%, rgba(52, 211, 153, 0.14), transparent 65%),
+    radial-gradient(ellipse 35% 30% at 75% 70%, rgba(53, 224, 216, 0.1), transparent 65%),
+    radial-gradient(ellipse 30% 25% at 60% 30%, rgba(52, 211, 153, 0.08), transparent 65%);
+  animation: aurora 16s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .aurora {
+    animation: none;
+  }
+}
+
+/* ---------- error shake ---------- */
+@keyframes shake {
+  0%, 100% { transform: translateX(0) }
+  20% { transform: translateX(-7px) }
+  40% { transform: translateX(6px) }
+  60% { transform: translateX(-4px) }
+  80% { transform: translateX(3px) }
+}
+.animate-shake {
+  animation: shake 0.45s ease-in-out;
+}
+
+/* ---------- film-grain noise ---------- */
+.noise::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------- drifting light beam ---------- */
+@keyframes beam {
+  0% { transform: translateX(-60%) rotate(18deg); opacity: 0 }
+  15% { opacity: 0.5 }
+  85% { opacity: 0.5 }
+  100% { transform: translateX(160%) rotate(18deg); opacity: 0 }
+}
+.light-beam {
+  position: absolute;
+  top: -30%;
+  left: 0;
+  width: 22rem;
+  height: 160%;
+  background: linear-gradient(90deg, transparent, rgba(52, 211, 153, 0.05), transparent);
+  animation: beam 14s ease-in-out infinite;
+  pointer-events: none;
+}
+.light-beam.delay {
+  animation-delay: 7s;
+  background: linear-gradient(90deg, transparent, rgba(53, 224, 216, 0.04), transparent);
+}
+
+/* ---------- animated nav underline ---------- */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1.5px;
+  background: linear-gradient(90deg, #34d399, #35e0d8);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* ---------- skeleton shimmer ---------- */
+@keyframes skeleton {
+  from { background-position: 200% 0 }
+  to { background-position: -200% 0 }
+}
+.skeleton {
+  background: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0.04) 40%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.04) 60%
+  );
+  background-size: 200% 100%;
+  animation: skeleton 1.6s linear infinite;
+  border-radius: 0.75rem;
+}
+
+/* ---------- glowing chart line ---------- */
+.chart-glow .recharts-area-curve {
+  filter: drop-shadow(0 0 6px rgba(52, 211, 153, 0.6));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-shake,
+  .light-beam,
+  .skeleton {
+    animation: none;
+  }
+}

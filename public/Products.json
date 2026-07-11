@@ -1,0 +1,290 @@
+{
+  "project": "MOVO Smart Recovery Nutrition",
+  "owner": "Bhuvanesh",
+  "region_focus": "Pfarrkirchen, Bavaria",
+  "currency": "EUR",
+  "products": [
+    {
+      "id": "p1",
+      "supermarket": "Lidl",
+      "product_name": "Milbona High Protein Pudding Vanilla",
+      "package_size": "200g",
+      "retail_price": 0.99,
+      "protein_per_100g": "10.0g",
+      "total_protein_per_package": "20.0g",
+      "category": "Yogurt/Dairy"
+    },
+    {
+      "id": "p2",
+      "supermarket": "Lidl",
+      "product_name": "Milbona Skyr Natural",
+      "package_size": "500g",
+      "retail_price": 1.49,
+      "protein_per_100g": "11.0g",
+      "total_protein_per_package": "55.0g",
+      "category": "Yogurt/Dairy"
+    },
+    {
+      "id": "p3",
+      "supermarket": "Lidl",
+      "product_name": "Sondey Eiweißbrot (Protein Bread)",
+      "package_size": "500g",
+      "retail_price": 1.99,
+      "protein_per_100g": "22.0g",
+      "total_protein_per_package": "110.0g",
+      "category": "Bread"
+    },
+    {
+      "id": "p4",
+      "supermarket": "Lidl",
+      "product_name": "Nixe Thunfischfilets Naturell (Drained)",
+      "package_size": "150g",
+      "retail_price": 1.49,
+      "protein_per_100g": "25.0g",
+      "total_protein_per_package": "37.5g",
+      "category": "Canned Fish"
+    },
+    {
+      "id": "p5",
+      "supermarket": "Lidl",
+      "product_name": "Formil H-Milch 1.5%",
+      "package_size": "1L",
+      "retail_price": 0.95,
+      "protein_per_100g": "3.4g",
+      "total_protein_per_package": "34.0g",
+      "category": "Milk"
+    },
+    {
+      "id": "p6",
+      "supermarket": "Aldi Süd",
+      "product_name": "Milsani High Protein Quark",
+      "package_size": "250g",
+      "retail_price": 0.99,
+      "protein_per_100g": "10.0g",
+      "total_protein_per_package": "25.0g",
+      "category": "Yogurt/Dairy"
+    },
+    {
+      "id": "p7",
+      "supermarket": "Aldi Süd",
+      "product_name": "Goldähren Haferflocken Kernig (Oats)",
+      "package_size": "500g",
+      "retail_price": 0.79,
+      "protein_per_100g": "13.5g",
+      "total_protein_per_package": "67.5g",
+      "category": "Oats"
+    },
+    {
+      "id": "p8",
+      "supermarket": "Aldi Süd",
+      "product_name": "Milsani H-Milch 3.5%",
+      "package_size": "1L",
+      "retail_price": 1.05,
+      "protein_per_100g": "3.3g",
+      "total_protein_per_package": "33.0g",
+      "category": "Milk"
+    },
+    {
+      "id": "p9",
+      "supermarket": "Aldi Süd",
+      "product_name": "Goldähren Eiweißbrot (Protein Bread)",
+      "package_size": "500g",
+      "retail_price": 1.99,
+      "protein_per_100g": "21.0g",
+      "total_protein_per_package": "105.0g",
+      "category": "Bread"
+    },
+    {
+      "id": "p10",
+      "supermarket": "Aldi Süd",
+      "product_name": "Rio D'Oro Bananen (Loose)",
+      "package_size": "1kg",
+      "retail_price": 1.19,
+      "protein_per_100g": "1.1g",
+      "total_protein_per_package": "11.0g",
+      "category": "Fruit"
+    },
+    {
+      "id": "p11",
+      "supermarket": "Rewe",
+      "product_name": "Ja! Speisequark Magerstufe",
+      "package_size": "500g",
+      "retail_price": 1.39,
+      "protein_per_100g": "12.0g",
+      "total_protein_per_package": "60.0g",
+      "category": "Yogurt/Dairy"
+    },
+    {
+      "id": "p12",
+      "supermarket": "Rewe",
+      "product_name": "Ja! Eier (10 Eggs, Size M)",
+      "package_size": "10 pieces",
+      "retail_price": 1.99,
+      "protein_per_100g": "13.0g",
+      "total_protein_per_package": "71.5g",
+      "category": "Eggs"
+    },
+    {
+      "id": "p13",
+      "supermarket": "Rewe",
+      "product_name": "Ja! High Protein Joghurt",
+      "package_size": "200g",
+      "retail_price": 0.99,
+      "protein_per_100g": "10.0g",
+      "total_protein_per_package": "20.0g",
+      "category": "Yogurt/Dairy"
+    },
+    {
+      "id": "p14",
+      "supermarket": "Rewe",
+      "product_name": "Chiquita Bananas",
+      "package_size": "1kg",
+      "retail_price": 1.99,
+      "protein_per_100g": "1.1g",
+      "total_protein_per_package": "11.0g",
+      "category": "Fruit"
+    },
+    {
+      "id": "p15",
+      "supermarket": "Rewe",
+      "product_name": "Wilhelm Brandenburg Hähnchenbrustfilet",
+      "package_size": "400g",
+      "retail_price": 4.49,
+      "protein_per_100g": "23.0g",
+      "total_protein_per_package": "92.0g",
+      "category": "Meat"
+    },
+    {
+      "id": "p16",
+      "supermarket": "Kaufland",
+      "product_name": "K-Classic Thunfisch in eigenem Saft",
+      "package_size": "150g",
+      "retail_price": 1.49,
+      "protein_per_100g": "25.0g",
+      "total_protein_per_package": "37.5g",
+      "category": "Canned Fish"
+    },
+    {
+      "id": "p17",
+      "supermarket": "Kaufland",
+      "product_name": "K-Classic Haferflocken Zart",
+      "package_size": "500g",
+      "retail_price": 0.79,
+      "protein_per_100g": "13.5g",
+      "total_protein_per_package": "67.5g",
+      "category": "Oats"
+    },
+    {
+      "id": "p18",
+      "supermarket": "Kaufland",
+      "product_name": "K-Classic Eier (10 Bodenhaltung)",
+      "package_size": "10 pieces",
+      "retail_price": 1.99,
+      "protein_per_100g": "13.0g",
+      "total_protein_per_package": "71.5g",
+      "category": "Eggs"
+    },
+    {
+      "id": "p19",
+      "supermarket": "Kaufland",
+      "product_name": "K-Classic Bananen (Loose)",
+      "package_size": "1kg",
+      "retail_price": 1.19,
+      "protein_per_100g": "1.1g",
+      "total_protein_per_package": "11.0g",
+      "category": "Fruit"
+    },
+    {
+      "id": "p20",
+      "supermarket": "Kaufland",
+      "product_name": "K-Purland Hähnchenbrustfilet",
+      "package_size": "400g",
+      "retail_price": 4.29,
+      "protein_per_100g": "23.0g",
+      "total_protein_per_package": "92.0g",
+      "category": "Meat"
+    }
+  ],
+  "weekly_deals": [
+    {
+      "product_id": "p1",
+      "supermarket": "Lidl",
+      "product_name": "Milbona High Protein Pudding Vanilla",
+      "normal_price": 0.99,
+      "offer_price": 0.69,
+      "discount_percentage": "30%"
+    },
+    {
+      "product_id": "p3",
+      "supermarket": "Lidl",
+      "product_name": "Sondey Eiweißbrot (Protein Bread)",
+      "normal_price": 1.99,
+      "offer_price": 1.49,
+      "discount_percentage": "25%"
+    },
+    {
+      "product_id": "p4",
+      "supermarket": "Lidl",
+      "product_name": "Nixe Thunfischfilets Naturell",
+      "normal_price": 1.49,
+      "offer_price": 1.11,
+      "discount_percentage": "25%"
+    },
+    {
+      "product_id": "p6",
+      "supermarket": "Aldi Süd",
+      "product_name": "Milsani High Protein Quark",
+      "normal_price": 0.99,
+      "offer_price": 0.75,
+      "discount_percentage": "24%"
+    },
+    {
+      "product_id": "p10",
+      "supermarket": "Aldi Süd",
+      "product_name": "Rio D'Oro Bananen (Loose, 1kg)",
+      "normal_price": 1.19,
+      "offer_price": 0.89,
+      "discount_percentage": "25%"
+    },
+    {
+      "product_id": "p7",
+      "supermarket": "Aldi Süd",
+      "product_name": "Goldähren Haferflocken Kernig",
+      "normal_price": 0.79,
+      "offer_price": 0.59,
+      "discount_percentage": "25%"
+    },
+    {
+      "product_id": "p11",
+      "supermarket": "Rewe",
+      "product_name": "Ja! Speisequark Magerstufe",
+      "normal_price": 1.39,
+      "offer_price": 0.99,
+      "discount_percentage": "29%"
+    },
+    {
+      "product_id": "p15",
+      "supermarket": "Rewe",
+      "product_name": "Wilhelm Brandenburg Hähnchenbrustfilet",
+      "normal_price": 4.49,
+      "offer_price": 3.79,
+      "discount_percentage": "15%"
+    },
+    {
+      "product_id": "p16",
+      "supermarket": "Kaufland",
+      "product_name": "K-Classic Thunfisch in eigenem Saft",
+      "normal_price": 1.49,
+      "offer_price": 1.11,
+      "discount_percentage": "25%"
+    },
+    {
+      "product_id": "p20",
+      "supermarket": "Kaufland",
+      "product_name": "K-Purland Hähnchenbrustfilet",
+      "normal_price": 4.29,
+      "offer_price": 3.49,
+      "discount_percentage": "18%"
+    }
+  ]
+}

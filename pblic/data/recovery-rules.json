@@ -1,0 +1,30 @@
+{
+  "Running": {
+    "High": {
+      "protein": 35,
+      "hydration": 700
+    },
+    "Medium": {
+      "protein": 28,
+      "hydration": 500
+    }
+  },
+
+  "Gym": {
+    "High": {
+      "protein": 45,
+      "hydration": 800
+    },
+    "Medium": {
+      "protein": 35,
+      "hydration": 600
+    }
+  },
+
+  "Cycling": {
+    "High": {
+      "protein": 30,
+      "hydration": 900
+    }
+  }
+}
