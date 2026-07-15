@@ -41,3 +41,6 @@ android/app/build
 .gradle
 *.apk
 *.keystore
+
+# Reports
+WORKLOG.md
