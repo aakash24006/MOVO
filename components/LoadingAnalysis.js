@@ -15,37 +15,22 @@ export default function LoadingAnalysis() {
   useEffect(() => {
 
     const interval = setInterval(() => {
-
       setProgress((prev) => {
-
-        const next = prev + 1
-
-        if (next < 35) {
-
-          setMessage(
-            'Analyzing your workout...'
-          )
-
-        } else if (next < 70) {
-
-          setMessage(
-            'Calculating recovery needs...'
-          )
-
-        } else {
-
-          setMessage(
-            'Finding affordable options nearby...'
-          )
-
+        if (prev >= 100) {
+          clearInterval(interval)
+          return 100
         }
-
+        const next = prev + 1
+        if (next < 35) {
+          setMessage('Analyzing your workout...')
+        } else if (next < 70) {
+          setMessage('Calculating recovery needs...')
+        } else {
+          setMessage('Finding affordable options nearby...')
+        }
         return next
-
       })
-
     }, 25)
-
     return () => clearInterval(interval)
 
   }, [])
