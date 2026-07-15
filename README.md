@@ -34,3 +34,29 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Android App
+
+MOVO also ships as an Android app (`android/` folder). It's a Capacitor WebView wrapper that loads the live deployment at https://movo-kappa.vercel.app, so it always shows the latest released web version. App ID: `com.movo.app`.
+
+### Requirements
+
+- Android Studio (latest stable) with Android SDK
+- JDK 17 (bundled with Android Studio)
+- Node.js 18+
+
+### Build and run
+
+```bash
+npm install
+npx cap sync android
+Then open the android/ folder in Android Studio, wait for Gradle sync, and press Run on an emulator or USB-connected device.
+Build the APK
+bashcd android
+./gradlew assembleDebug
+Output: android/app/build/outputs/apk/debug/movo-<version>.apk — or use Build → Build APK(s) in Android Studio.
+Notes
+
+The app URL is set in capacitor.config.ts (server.url); run npx cap sync android after any config change
+Location permissions are required for the store map
+Android integration by Bhuvanesh Mehta
