@@ -21,19 +21,11 @@ export default function NearbyStores() {
 
         console.log('Location:', lat, lon)
 
-const query = `
-[out:json];
-(
-  node["shop"="supermarket"](around:5000,${lat},${lon});
-);
-out;
-`
-
-const url =
-  "https://overpass-api.de/api/interpreter?data=" +
-  encodeURIComponent(query)
-
-const response = await fetch(url)
+const response = await fetch('/api/stores', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ lat, lng: lon })
+})
 
 const data = await response.json()
 
